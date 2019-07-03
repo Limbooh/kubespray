@@ -390,7 +390,7 @@ fallback_ips: "{{ fallback_ips_base | from_yaml }}"
 
 ## Set no_proxy to all assigned cluster IPs and hostnames
 no_proxy: >-
-  {%- if http_proxy is defined or https_proxy is defined %}
+  {%- if docker_http_proxy is defined or docker_https_proxy is defined %}
   {%- if loadbalancer_apiserver is defined -%}
   {{ apiserver_loadbalancer_domain_name| default('') }},
   {{ loadbalancer_apiserver.address | default('') }},
@@ -410,8 +410,8 @@ no_proxy: >-
   {%- endif %}
 
 proxy_env:
-  http_proxy: "{{ http_proxy| default ('') }}"
-  https_proxy: "{{ https_proxy| default ('') }}"
+  http_proxy: "{{ docker_http_proxy| default ('') }}"
+  https_proxy: "{{ docker_https_proxy| default ('') }}"
   no_proxy: "{{ no_proxy| default ('') }}"
 
 ssl_ca_dirs: >-

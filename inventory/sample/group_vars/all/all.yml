@@ -58,7 +58,8 @@ loadbalancer_apiserver_healthcheck_port: 8081
 ## Set these proxy values in order to update package manager and docker daemon to use proxies
 #http_proxy: "http://45.78.32.244:3128"
 #https_proxy: "http://45.78.32.244:3128"
-
+docker_http_proxy: "http://45.78.32.244:3128"
+docker_https_proxy: "http://45.78.32.244:3128"
 ## Refer to roles/kubespray-defaults/defaults/main.yml before modifying no_proxy
 # no_proxy: ""
 
