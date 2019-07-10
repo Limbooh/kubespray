@@ -410,8 +410,8 @@ no_proxy: >-
   {%- endif %}
 
 proxy_env:
-  http_proxy: "{{ docker_http_proxy| default ('') }}"
-  https_proxy: "{{ docker_https_proxy| default ('') }}"
+  docker_http_proxy: "{{ docker_http_proxy| default ('') }}"
+  docker_https_proxy: "{{ docker_https_proxy| default ('') }}"
   no_proxy: "{{ no_proxy| default ('') }}"
 
 ssl_ca_dirs: >-

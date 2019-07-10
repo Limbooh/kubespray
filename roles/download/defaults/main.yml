@@ -87,7 +87,7 @@ calicoctl_download_url: "https://github.com/projectcalico/calicoctl/releases/dow
 crictl_download_url: "https://github.com/kubernetes-sigs/cri-tools/releases/download/{{ crictl_version }}/crictl-{{ crictl_version }}-{{ ansible_system | lower }}-{{ image_arch }}.tar.gz"
 
 crictl_checksums:
-  arm:
+  arm:ansible_system
     v1.14.0: 9910cecfd6558239ba015323066c7233d8371af359b9ddd0b2a35d5223bcf945
     v1.13.0: 2e478ebed85f9d70d49fd8f1d1089c8fba6e37d3461aeef91813f1ab0f0df586
   arm64:
